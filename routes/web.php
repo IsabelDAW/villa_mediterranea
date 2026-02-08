@@ -7,7 +7,16 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Email\RespuestaForm;
-
+use Illuminate\Support\Facades\Artisan;
+Route::get('/instalar-todo', function () {
+    try {
+        // Esto crea las tablas y mete los datos iniciales
+        Artisan::call('migrate:fresh', ['--seed' => true, '--force' => true]);
+        return "✅ Tablas creadas y datos cargados con éxito:<br><pre>" . Artisan::output() . "</pre>";
+    } catch (\Exception $e) {
+        return "❌ Error: " . $e->getMessage();
+    }
+});
 // 1. HOME
 Route::get('/', function () {
     return view('pages.home'); })->name('home');
