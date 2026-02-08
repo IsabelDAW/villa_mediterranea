@@ -1,0 +1,314 @@
+      body {
+            background-image: url(../img/fondo.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .bg-white {
+            background-color: white;
+        }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:wght@600&display=swap');
+
+.navbar {
+
+/*background-color: #004a7c;*/
+background-color: #033353;
+font-family: 'Playfair Display', serif;
+font-weight: 600; 
+font-style: italic; 
+}
+
+
+
+        /* VILLA MEDITERRANEA EN LA BARRA (logo) */
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2a9d8f;
+            transition: color 0.3s ease; /* Animación suave al cambiar de color */
+        }
+
+        .navbar-brand:hover {
+            color: #264653;/* Al pasar el ratón, cambia a azul profundo */
+        }
+
+        /* Enlaces del menú */
+        .nav-link {
+            color: #333;
+            font-size: 1.1rem;
+            margin-left: 1rem;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #e9c46a;
+            border-bottom: 2px solid #e9c46a;
+        }
+/* Enlace activo en el navbar */
+.nav-link.active {
+  color: #2a9d8f !important;   /* Color mediterráneo */
+  border-bottom: 2px solid #2a9d8f; /* Subrayado elegante */
+  font-weight: 600;             /* Un poco más de peso */
+}
+
+
+        /* Botón hamburguesa en móviles */
+        .navbar-toggler {
+            border: none;
+        }
+
+        /* Icono de usuario */
+    .dropdown .fas.fa-user {
+        font-size: 1.3rem;
+        color: #2772c9;
+        transition: color 0.3s ease;
+        outline: none;
+    }
+
+    .dropdown .fas.fa-user:hover {
+        color: #e9c46a; /* Dorado Arena */
+    }
+
+   
+.bg-arena {
+    background-color: #e2c08d;
+    color: #4a4a4a;
+}
+.dropdown-divider{
+    color:#e2c08d;
+}
+
+
+    
+/* IMAGENES DEL CARRUSEL */
+/* Ajuste de altura y proporción */
+.carousel-item img {
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+/* Animación Ken Burns */
+.kenburns {
+  animation: kenburns 12s ease-in-out infinite;
+}
+
+@keyframes kenburns {
+  0%   { transform: scale(1) translate(0,0); }
+  50%  { transform: scale(1.1) translate(-2%, -2%); }
+  100% { transform: scale(1) translate(0,0); }
+}
+
+/* Estilo de textos superpuestos */
+.carousel-caption h3 {
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.carousel-caption p {
+  color: #f1f1f1;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Controles personalizados */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(42, 157, 143, 0.7);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/*Estilos del carrusel texto*/
+/* Fondo degradado detrás del caption */
+.carousel-caption {
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Estilo del título y párrafo */
+.carousel-caption {
+  background: linear-gradient(to top, rgba(0,0,0,0.0.25), rgba(0,0,0,0.0)); /* degradado más claro */
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 70%; /* no ocupa toda la imagen */
+  margin: 0 auto; /* centrado horizontal */
+}
+
+.carousel-caption h3 {
+  color: #fff;
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.carousel-caption p {
+  color: #f1f1f1;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+/*Para las imagenes del acordeon*/
+.img-fluid{
+  /* tamaño fijo */
+  width: 100%;       
+  height: 400px;     
+  padding-bottom: 0.5%;
+    /*que la foto no se estire */
+  object-fit: cover;
+}
+
+/*ESTILO FRASE*/
+
+.custom-card {
+  background: rgba(0, 0, 0, 0.6); /* fondo oscuro semitransparente */
+  color: #fff;                    /* texto en blanco para contraste */
+  border-radius: 12px;            /* esquinas suaves */
+  padding: 20px;
+}
+.custom-card .card-header {
+  background: transparent;        /* sin fondo sólido en el header */
+  border-bottom: none;
+  font-size: 1.3rem;
+}
+
+/*ESTILOS TARJETAS*/
+/*BOTON*/
+.btn-primary {
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);      /* efecto de zoom suave */
+}
+/*IMAGENES PARA QUE SALGAN CON EL MISMO TAMAÑO*/
+.card-img-top {
+  height: 30vh;        /* altura relativa al viewport (30% de la pantalla) */
+  width: 100%;
+  object-fit: cover;
+}
+/* --- ESTILOS DEL FORMULARIO DE REGISTRO --- */
+
+    /* Sobrescribir el color principal (Botones, enlaces primarios) */
+    .bg-white .btn-primary {
+        background-color: #2772c9; 
+        border-color: #2772c9;
+        transition: all 0.3s ease;
+    }
+
+    .bg-white .btn-primary:hover {
+        background-color: #264653; /* Azul Oscuro al pasar el ratón */
+        border-color: #264653;
+    }
+
+    /* Aplicar el color azúl Mediterráneo a los enlaces (e.g., "Iniciar sesión") */
+    .bg-white .link-primary {
+        color: #2772c9; 
+    }
+
+    /* Aplicar el color Dorado Arena al pasar el ratón por los enlaces del formulario */
+    .bg-white .link-primary:hover {
+        color: #e9c46a; 
+    }
+
+    /* Estilo para los iconos SVG (y ahora Font Awesome) dentro de los campos de entrada */
+    .input-group-text svg, .input-group-text i {
+        color: #2772c9; /* Colorea los iconos de entrada con el azúl principal */
+    }
+    
+    /* Estilo para el icono de error (el color rojo de la validación) */
+    .text-danger {
+        color: #e9c46a; /* Marcador de campo requerido en Dorado Arena */
+    }
+
+
+
+
+    .navbar-nav .nav-link {
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0d6efd; /* Tu color primario */
+}
+
+.navbar-nav .nav-link.active {
+    border-bottom: 2px solid #0d6efd;
+}
+
+
+/*Menu desplegable área privada*/
+.dropdown-item {
+    padding: 12px 20px; /* Más altura */
+    font-family: 'Playfair Display', serif; /* Si usas una fuente elegante */
+}
+
+ .dropdown-menu {
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    overflow: hidden; /* Para que el fondo negro del logout no se salga de las esquinas */
+}
+/* Color arena para los iconos */
+.dropdown-item i, .dropdown-item svg {
+    color: #e2c08d; 
+    margin-right: 12px;
+}
+
+/* Suavizar el encabezado */
+.dropdown-header {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.7rem;
+    color: #999;
+}
+
+/* 1. Quitamos el padding inferior del contenedor para que el azul toque el borde */
+.dropdown-menu {
+    padding-bottom: 0;
+    padding-top: 0;
+    border: 1px solid #003354; /* Opcional: borde del mismo azul */
+    border-radius: 0; /* Eliminamos redondeado como pediste */
+    overflow: hidden;
+}
+
+/* 2. Estilo del botón Cerrar Sesión para que ocupe todo el espacio */
+.dropdown-item.logout-link {
+    background-color: #003354 ; /* azul oscuro del nav */
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    
+    /* Estos márgenes negativos eliminan el espacio blanco de Bootstrap */
+    margin-left: -1px; 
+    margin-right: -1px;
+    margin-bottom: 0;
+    
+    width: calc(100% + 2px); /* Ajuste para cubrir bordes */
+    display: block;
+    text-align: center;
+    border-radius: 0; /* Sin redondeado */
+}
+
+/* 3. Estilo del Header*/
+.dropdown-header {
+    background-color: #003354;
+    color: #ffffff;
+    margin-top: 0;
+    padding: 15px 20px;
+    border-radius: 0;
+}
+
+/* 4. Quitar el efecto hover grisáceo de Bootstrap que ensucia el azul */
+.dropdown-item.logout-link:hover {
+    background-color: #004a7a; /* Un azul un poco más claro */
+    color: #e2c08d; /*color arena */
+}
