@@ -10,11 +10,15 @@ use App\Http\Controllers\Email\RespuestaForm;
 use Illuminate\Support\Facades\Artisan;
 Route::get('/instalar-todo', function () {
     try {
-        // Esto crea las tablas y mete los datos iniciales
-        Artisan::call('migrate:fresh', ['--seed' => true, '--force' => true]);
-        return "✅ Tablas creadas y datos cargados con éxito:<br><pre>" . Artisan::output() . "</pre>";
+        // 'migrate:fresh' borra todo lo viejo y lo crea de nuevo correctamente
+        Artisan::call('migrate:fresh', ['--force' => true]);
+        
+        // Si tienes datos iniciales (Seeders), descomenta la línea de abajo:
+        // Artisan::call('db:seed', ['--force' => true]);
+        
+        return "✅ ¡BINGO! Tablas creadas desde cero:<br><pre>" . Artisan::output() . "</pre>";
     } catch (\Exception $e) {
-        return "❌ Error: " . $e->getMessage();
+        return "❌ Error detallado: " . $e->getMessage();
     }
 });
 // 1. HOME
